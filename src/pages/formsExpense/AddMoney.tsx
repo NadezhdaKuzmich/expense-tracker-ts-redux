@@ -87,8 +87,8 @@ const AddMoney: React.FC = () => {
             value={price}
             placeholder="1000"
             onChange={handleInputChange}
-            onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
-              let inputValue = e.currentTarget.value.replace(/[e,+,-]/g, "");
+            onInput={(e: any) => {
+              let inputValue = e.target.value.replace(/[e,+,-]/g, "");
               e.target.value = inputValue;
             }}
             InputProps={{
