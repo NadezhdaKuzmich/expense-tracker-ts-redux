@@ -1,0 +1,18 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 60px;
+  gap: 30px;
+}
+
+.btn-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-text {
+  text-align: center;
+  font-size: 14px;
+  color: #9398a4;
+}

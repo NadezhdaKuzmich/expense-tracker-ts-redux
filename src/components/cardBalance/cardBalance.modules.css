@@ -1,0 +1,91 @@
+.balance-container {
+  padding: 60px 0 10px;
+}
+
+.card-balance {
+  position: relative;
+  max-width: 425px;
+  height: 320px;
+  margin: 0 auto;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  height: 270px;
+  width: 100%;
+  min-width: 310px;
+  border-radius: 25px;
+  background: #14294df7;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 20px #45434382;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px #434345;
+}
+
+.logo img,
+.chip img,
+.balance,
+.name,
+.from,
+.to,
+.ring {
+  position: absolute;
+}
+
+.logo img {
+  top: 35px;
+  right: 40px;
+  max-width: 80px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.chip img {
+  top: 110px;
+  left: 40px;
+  width: 50px;
+  height: auto;
+  opacity: 0.8;
+}
+
+.balance,
+.name,
+.from,
+.to {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+}
+
+.balance {
+  left: 40px;
+  bottom: 65px;
+  font-family: "Nunito", sans-serif;
+  font-size: 42px;
+}
+
+.name {
+  font-size: 0.5rem;
+  left: 40px;
+  bottom: 35px;
+}
+
+.from {
+  font-size: 0.5rem;
+  bottom: 35px;
+  right: 110px;
+}
+
+.to {
+  font-size: 0.5rem;
+  bottom: 35px;
+  right: 40px;
+}
