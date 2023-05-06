@@ -62,7 +62,7 @@ const PageStatistics: React.FC = () => {
     },
   ];
 
-  function dataSet(filter: any, expense: any) {
+  function dataSet(filter: any, expense: number) {
     let data = [];
     for (let i = 0; i < categoriesExpenses.length; i++) {
       let category = Math.floor(

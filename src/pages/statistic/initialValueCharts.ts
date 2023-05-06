@@ -1,27 +1,29 @@
-export const countExpense = (expenses: any) => {
+import { Expense } from "../../types/types";
+
+export const countExpense = (expenses: Expense[]) => {
   const expense = expenses
     .filter((expense: any) => expense.price < 0)
-    .map((expense: any) => Number(expense.price))
+    .map((expense: Expense) => Number(expense.price))
     .reduce((acc: number, item: number) => acc + item, 0);
   return expense;
 };
 
-export const countSalary = (expenses: any) => {
+export const countSalary = (expenses: Expense[]) => {
   const expense = expenses
     .filter((expense: any) => expense.price > 0)
-    .map((expense: any) => Number(expense.price))
+    .map((expense: Expense) => Number(expense.price))
     .reduce((acc: number, item: number) => acc + item, 0);
   return expense;
 };
 
-export const averageExpenseY = (expenses: any) => {
+export const averageExpenseY = (expenses: Expense[]) => {
   const sum = expenses
     .filter((expense: any) => expense.price < 0)
     .filter(
-      (expense: any) =>
+      (expense: Expense) =>
         new Date(expense.date).getFullYear() === new Date().getFullYear()
     )
-    .map((expense: any) => Number(expense.price))
+    .map((expense: Expense) => Number(expense.price))
     .reduce((acc: number, item: number) => acc + item, 0);
 
   const today = new Date();
@@ -33,14 +35,14 @@ export const averageExpenseY = (expenses: any) => {
   return (Math.abs(sum) / days).toFixed(2);
 };
 
-export const averageExpenseM = (expenses: any) => {
+export const averageExpenseM = (expenses: Expense[]) => {
   const sum = expenses
     .filter((expense: any) => expense.price < 0)
     .filter(
-      (expense: any) =>
+      (expense: Expense) =>
         new Date(expense.date).getMonth() === new Date().getMonth()
     )
-    .map((expense: any) => Number(expense.price))
+    .map((expense: Expense) => Number(expense.price))
     .reduce((acc: number, item: number) => acc + item, 0);
 
   const today = new Date();
@@ -52,7 +54,7 @@ export const averageExpenseM = (expenses: any) => {
   return (Math.abs(sum) / days).toFixed(2);
 };
 
-export const getDays = (start: any, end: any) => {
+export const getDays = (start: Date, end: Date) => {
   var msPerDay = 24 * 60 * 60 * 1000;
   const daysMs = (start.getTime() - end.getTime()) / msPerDay;
   const days = Math.round(daysMs);
